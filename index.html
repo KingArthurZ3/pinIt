@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pin It</title>
+    <link rel="stylesheet" href="indexStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300|Lato" rel="stylesheet">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="indexScript.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyASoRAqR4rLcZY4XH7_raJEep5jjeOZYiM",
+            authDomain: "basicblog-94f96.firebaseapp.com",
+            databaseURL: "https://basicblog-94f96.firebaseio.com",
+            projectId: "basicblog-94f96",
+            storageBucket: "basicblog-94f96.appspot.com",
+            messagingSenderId: "420279086869"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+<body>
+    <div id="nav">
+        <img src="cameraLogo.png" style="float: left; width: 60px; height: 40px; margin-top: 5px;margin-left: 15px;">
+        <div id="navTitle">pinIt.</div>
+        <button id="logBtn">login</button>
+    </div>
+
+    <div id="intro">A modern take on art, Join the Michelangelos of today.</div>
+    <div id="newbg">
+        <div id="display-name"></div>
+        hello there
+        <button id="logOut">log out</button>
+    </div>
+</body>
+</html>
