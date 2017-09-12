@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>pin It</title>
     <link rel="stylesheet" href="indexStyle.css">
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300|Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300|Open+Sans" rel="stylesheet">
     <script src="jquery-3.2.1.min.js"></script>
     <script src="indexScript.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
@@ -20,19 +20,43 @@
         };
         firebase.initializeApp(config);
     </script>
+    <script>
+        // Set the configuration for your app
+        // TODO: Replace with your project's config object
+        var config = {
+            apiKey: "AIzaSyASoRAqR4rLcZY4XH7_raJEep5jjeOZYiM",
+            authDomain: "basicblog-94f96.firebaseapp.com",
+            databaseURL: "https://basicblog-94f96.firebaseio.com",
+            storageBucket: "basicblog-94f96.appspot.com"
+        };
+        firebase.initializeApp(config);
+
+        // Get a reference to the database service
+        var database = firebase.database();
+    </script>
 </head>
 <body>
     <div id="nav">
-        <img src="cameraLogo.png" style="float: left; width: 60px; height: 40px; margin-top: 5px;margin-left: 15px;">
-        <div id="navTitle">pinIt.</div>
-        <button id="logBtn">login</button>
+        <img src="cameraLogo.png" style="float: left; width: 50px; height: 40px; margin-top: 5px;margin-left: 15px;">
+        <div id="navTitle">pin it.</div>
+        <button id="aboutBtn">About Us</button>
     </div>
 
     <div id="intro">A modern take on art, Join the Michelangelos of today.</div>
+    <div class="container"><button id="logBtn">Log in</button></div>
+
     <div id="newbg">
-        <div id="display-name"></div>
-        hello there
+        <div id="display-name" class="welcome"></div>
         <button id="logOut">log out</button>
+        <div id="photoCanvas">
+            <progress value="0" max="100" id="uploader">0%</progress>
+            <input type="file" value="upload" id="fileButton"/>
+
+            <div id="photoGrid">
+
+            </div>
+
+        </div>
     </div>
 </body>
 </html>
